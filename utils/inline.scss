@@ -1,0 +1,54 @@
+@import '../../../../css/vars';
+
+.button {
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 0 8px 0 0;
+    min-width: 21px;
+    height: 42px;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    color: $white;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    white-space: normal;
+    letter-spacing: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+
+    &:first-child {
+        padding-left: 18px;
+        text-align: left;
+    }
+
+    &:last-child {
+        padding-right: 18px;
+    }
+
+    i {
+        font-size: 1.4rem;
+        line-height: 42px;
+    }
+}
+
+.active {
+    color: $orange;
+}
+
+.header {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 46px;
+
+    i {
+        margin-right: 1px;
+    }
+}
+
+.underline {
+    padding: 0 !important;
+}

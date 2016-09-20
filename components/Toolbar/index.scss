@@ -1,0 +1,100 @@
+@import '../../../../../css/vars';
+
+.toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    transition: top 75ms ease-out, left 75ms ease-out;
+    animation: pop-upwards 180ms forwards linear;
+}
+
+.menu {
+    position: relative;
+    border: 1px solid $grey-light;
+    border-radius: 5px;
+    background: $grey-darker;
+}
+
+.arrow-down {
+    position: absolute;
+    left: 100px;
+    border-top: 6px solid $grey-light;
+    border-right: 6px solid transparent;
+    border-left: 6px solid transparent;
+}
+
+.arrow-down-inner {
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid $grey-darker;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+}
+
+.arrow-up {
+    position: absolute;
+    top: -6px;
+    left: 100px;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid $grey-light;
+    border-left: 6px solid transparent;
+}
+
+.arrow-up-inner {
+    position: absolute;
+    top: 2px;
+    left: -5px;
+    width: 0;
+    height: 0;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid $grey-darker;
+    border-left: 5px solid transparent;
+}
+
+.last {
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    padding: 0 10px 0 4px;
+}
+
+.divider {
+    position: relative;
+    top: 7px;
+    display: inline-block;
+    margin: 0 2px 0 8px;
+    width: 1px;
+    height: 23px;
+    background: $grey-light;
+}
+
+@keyframes pop-upwards {
+    0% {
+        opacity: 0;
+        transform: matrix(0.97, 0, 0, 1, 0, 12);
+    }
+
+    20% {
+        opacity: 0.7;
+        transform: matrix(0.99, 0, 0, 1, 0, 2);
+    }
+
+    40% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, -1);
+    }
+
+    70% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: matrix(1, 0, 0, 1, 0, 0);
+    }
+}
